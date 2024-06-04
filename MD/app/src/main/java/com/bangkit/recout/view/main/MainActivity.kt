@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.bangkit.recout.R
 
 class MainActivity : AppCompatActivity() {
+    //testing lagi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
