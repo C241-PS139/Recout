@@ -9,6 +9,7 @@ import com.bangkit.recout.R
 
 class MainActivity : AppCompatActivity() {
     //testing lagi
+    //tes lagi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
