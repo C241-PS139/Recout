@@ -3,4 +3,7 @@
     <string name="login">Sign In</string>
     <string name="signup">Sign Up</string>
     <string name="email">Email</string>
+    <string name="error_email">Email Not Match!</string>
+    <string name="min_length">Minimum Is %1$d Character!</string>
+    <string name="password">Password</string>
 </resources>
