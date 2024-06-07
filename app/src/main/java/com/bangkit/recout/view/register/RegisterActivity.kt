@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
 
+    // tes
+
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityRegisterBinding
 
