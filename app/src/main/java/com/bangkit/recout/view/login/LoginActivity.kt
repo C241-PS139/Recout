@@ -3,11 +3,7 @@ package com.bangkit.recout.view.login
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.bangkit.recout.R
 import com.bangkit.recout.databinding.ActivityLoginBinding
 import com.bangkit.recout.view.main.MainActivity
 import com.bangkit.recout.view.register.RegisterActivity

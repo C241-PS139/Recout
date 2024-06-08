@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "56595442963",
-    "project_id": "recout-78029",
-    "storage_bucket": "recout-78029.appspot.com"
+    "project_number": "540590559283",
+    "project_id": "recout-app",
+    "storage_bucket": "recout-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:56595442963:android:652e20357b43a7729abee6",
+        "mobilesdk_app_id": "1:540590559283:android:77ec50b83bdcf518e81346",
         "android_client_info": {
           "package_name": "com.bangkit.recout"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBOChif15wIdJC5p2ZJgEZbVm8vjr0GgfE"
+          "current_key": "AIzaSyDsJWfWHH0tC2DG5Yv1aH9WlnZ-YxvcSlU"
         }
       ],
       "services": {
