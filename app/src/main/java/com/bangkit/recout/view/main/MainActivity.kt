@@ -1,5 +1,6 @@
 package com.bangkit.recout.view.main
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityMainBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -24,7 +26,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         } else {
-            binding.welcomeText.text = "Welcome, ${user.email}"
+            val userName = user.displayName ?: user.email
+            binding.welcomeText.text = "Welcome,\n$userName"
         }
 
         binding.logoutButton.setOnClickListener {
@@ -32,5 +35,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
     }
 }

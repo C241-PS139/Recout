@@ -55,4 +55,10 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
     implementation("com.google.firebase:firebase-analytics")
 
+    //retrofit
+    implementation(libs.glide)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.logging.interceptor)
+
 }

@@ -7,16 +7,31 @@
     android:padding="16dp"
     tools:context=".view.main.MainActivity">
 
-<TextView
-    android:id="@+id/welcomeText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Welcome!"
-    android:textSize="24sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="horizontal">
 
-<Button
-    android:id="@+id/logoutButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Logout" />
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/logout"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item"/>
+
 </LinearLayout>
