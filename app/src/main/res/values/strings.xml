@@ -7,4 +7,10 @@
     <string name="min_length">Minimum Is %1$d Character!</string>
     <string name="password">Password</string>
     <string name="name">Nama</string>
+    <string name="product_image_desc">Product Image</string>
+    <string name="product_name">Product Name</string>
+    <string name="city">City</string>
+    <string name="usage">Usage</string>
+    <string name="temperatur">Temperature</string>
+    <string name="sign_in">Sign In</string>
 </resources>
