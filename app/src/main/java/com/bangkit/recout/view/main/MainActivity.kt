@@ -1,13 +1,13 @@
 package com.bangkit.recout.view.main
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.ProgressBar
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bangkit.recout.R
 import com.bangkit.recout.data.adapter.ProductAdapter
 import com.bangkit.recout.databinding.ActivityMainBinding
 import com.bangkit.recout.view.login.LoginActivity
@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityMainBinding
     private val productViewModel: MainViewModel by viewModels()
+    private lateinit var progressBar: ProgressBar
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -28,13 +28,16 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val recyclerView: RecyclerView = findViewById(R.id.list_item)
+        progressBar = binding.progressBar
+
+        val recyclerView: RecyclerView = binding.listItem
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         productViewModel.products.observe(this) { products ->
             if (products != null) {
                 val adapter = ProductAdapter(products)
                 recyclerView.adapter = adapter
+                showLoading(false)
             }
         }
         productViewModel.fetchProducts()
@@ -58,5 +61,9 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         finishAffinity()
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

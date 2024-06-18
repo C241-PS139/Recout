@@ -17,7 +17,7 @@ interface ApiService {
 fun createRequestBody(): RequestBody {
     val json = """
         {
-            "gender_product": "Women",
+            "gender_product": "Men",
             "city": "Sulawesi Selatan"
         }
     """.trimIndent()
