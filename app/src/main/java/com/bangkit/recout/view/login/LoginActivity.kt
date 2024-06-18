@@ -1,5 +1,7 @@
 package com.bangkit.recout.view.login
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -43,8 +45,24 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        binding.registerRedirectButton.setOnClickListener {
+        binding.registerText.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
+        playAnimation()
+    }
+
+    private fun playAnimation() {
+        val title = ObjectAnimator.ofFloat(binding.imageView, View.ALPHA, 1f).setDuration(300)
+        val email = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(300)
+        val pass = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(300)
+        val btn = ObjectAnimator.ofFloat(binding.btnSignIn, View.ALPHA, 1f).setDuration(300)
+        val reg = ObjectAnimator.ofFloat(binding.reg, View.ALPHA, 1f).setDuration(300)
+
+
+        AnimatorSet().apply {
+            playSequentially(title, email, pass, btn, reg)
+            start()
         }
     }
 

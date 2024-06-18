@@ -15,7 +15,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/ivImgWelcome"
-        app:srcCompat="@drawable/welcome" />
+        app:srcCompat="@drawable/welcome"
+        android:alpha="0"
+        tools:alpha="100"/>
 
     <ImageView
         android:id="@+id/ivImgWelcome"
@@ -25,7 +27,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivHeaderWelcome"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:srcCompat="@drawable/img_welcome" />
+        app:srcCompat="@drawable/img_welcome"
+        android:alpha="0"
+        tools:alpha="100"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -36,18 +40,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivImgWelcome"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:srcCompat="@drawable/primary_button" />
+        app:srcCompat="@drawable/primary_button"
+        android:alpha="0"
+        tools:alpha="100"/>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/secondary_button" />
+        app:srcCompat="@drawable/secondary_button"
+        android:alpha="0"
+        tools:alpha="100"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

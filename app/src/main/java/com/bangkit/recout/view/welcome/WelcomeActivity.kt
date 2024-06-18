@@ -1,7 +1,10 @@
 package com.bangkit.recout.view.welcome
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.recout.databinding.ActivityWelcomeBinding
 import com.bangkit.recout.view.login.LoginActivity
@@ -26,6 +29,26 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        playAnimation()
+
+    }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.ivImgWelcome, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+        }.start()
+
+        val title = ObjectAnimator.ofFloat(binding.ivHeaderWelcome, View.ALPHA, 1f).setDuration(500)
+        val img = ObjectAnimator.ofFloat(binding.ivImgWelcome, View.ALPHA, 1f).setDuration(500)
+        val signin = ObjectAnimator.ofFloat(binding.imageView2, View.ALPHA, 1f).setDuration(500)
+        val signup = ObjectAnimator.ofFloat(binding.imageView4, View.ALPHA, 1f).setDuration(500)
+
+        AnimatorSet().apply {
+            playSequentially(title, img, signin, signup)
+            start()
+        }
     }
 
     override fun onBackPressed() {
