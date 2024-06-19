@@ -9,3 +9,15 @@ Path Mobile development designs engaging apps using Kotlin language by integrati
 ## Features
 - Our app has an authentication feature that connects with firebase
 - Display outfit recommendations based on the user's temperature
+
+## Build
+1. Open Git bash here
+2. Input the following command into git bash:
+```bash
+git clone https://github.com/C241-PS139/Recout.git
+```
+3. Open Android Studio
+4. Find the folder where the clone was done and open the file
+5. If a message appears, select trust project
+6. Wait until all configurations are complete
+7. Run the application
